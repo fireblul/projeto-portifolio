@@ -134,15 +134,15 @@ article h2{
   margin-bottom: 10px;
 }
 
-article#video .video-conteiner{
+article#video #video-conteiner{
   position: relative;
   width: 100%;
   margin: auto;
   aspect-ratio: 16/9;
-  border: 5px solid red;
+  
 }
 
-video-conteiner iframe{
+#video-conteiner iframe{
   position: absolute;
   top: 0;
   left: 0;
@@ -160,8 +160,10 @@ video-conteiner iframe{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
 
 }
+
 
 #skill-conteiner .nome{
   font-weight: bold;
@@ -180,11 +182,42 @@ video-conteiner iframe{
   background-color: var(--fundo-principal);
   border-radius: 4px;
   
-
 }
 
 #skill-conteiner .progresso{
   height: 100%;
   background-color: var(--destaque-inverso);
   border-radius: 4px;
+  
 }
+
+#formacao-conteiner{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  
+
+}
+#formacao-conteiner .curso{
+  background-color: var(--fundo-principal);
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  padding-left: 15px;
+  transition: 0.3s;
+
+}
+#formacao-conteiner :hover{
+  border-width: 15px;
+  cursor: pointer;
+  border-color: var(--destaque);
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+  #skill-conteiner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
